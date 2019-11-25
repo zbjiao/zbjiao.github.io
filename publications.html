@@ -14,12 +14,27 @@
         		<li><a href="/publications">Publications</a></li>
     		</ul>
 		</nav>
+        
 		<div class="container">
         		<ul>
-        		<li>1. Solar Flare Intensity Prediction with Machine Learning Models 
-				<a href="/Solar_Flare_Prediction_with_LSTM_abstract.pdf">[Abstract]</a></li>
-		        <li>2. Interpreting LSTM prediction on solar flare eruption with time-series clustering
-				<a href="/Interpreting_LSTM_abstract.pdf">[Abstract]</a></li>
+        		<li>
+Jiao, Z., ..., Chen, Y. Solar Flare Intensity Prediction with Machine Learning Models (submitted to <I>Space Weather</I>)
+                </li>
+                <button onclick="myFunction('ab1')">Abstract</button>
+                
+                <div id="ab1">
+                We develop a mixed Long Short Term Memory (LSTM) regression model to predict the maximum solar flare intensity within 24-hour time windows 12, 24, 36 hours ahead of time using 6, 12, 24, 48 hours of data (predictors). The model makes use of (1) the Space-weather HMI Active Region Patches (SHARP) parameters as predictors and (2) the exact flare intensities instead of class labels recorded in the Geostationary Operational Environmental Satellites (GOES) data set as the source of response variables. Compared to solar flare classification, the model offers us more detailed information about the exact maximum flux level, i.e. intensity, for each occurrence of a flare. We also consider classification models built on top of the regression model and obtain better results in solar flare classifications as compared to \citet{chen2019identifying}. Our results suggest that the most efficient time period for predicting the solar activity is within 24 hours before the prediction time under LSTM architecture using the SHARP parameters.
+                </div>
+
+
+
+		        <li>2. Manchester, W., Sun, H., Jiao, Z., ... Wang, J. Interpreting LSTM prediction on Solar Flare Eruption with Time-series Clustering (submitted to <I>Space Weather</I>)
+                </li>
+                <button onclick="myFunction('ab2')">Abstract</button>
+
+                <div id="ab2">
+                We conduct a post-hoc analysis on the predictions made by Long Short Term Memory (LSTM) model on solar flare eruptions based on Space-weather HMI Active Region Patches (SHARP) parameters calculated along the polarity inversion line. We developed a dimension-reduction technique to reduce the dimensions of LSTM inputs and have demonstrated the different patterns of SHARP parameters that correspond to low and high prediction score in their low dimensional representation. Our paper shows that a subset of SHARP parameters contain the key signals of strong solar flare eruptions. The dynamics of these parameters have a highly uniform trajectory for many active regions whose LSTM scores transited from very low to very high. The results suggest that there exist a few threshold values of a subset of SHARP parameters surpassing which could indicate high probability of strong flare eruption. Our method has distilled the knowledge of solar flare eruption learnt by deep learning model and provides a more interpretable approximation where more physics related insights could be derived.
+                </div>
 			</ul>
 		</div><!-- /.container -->
 		<footer>
@@ -29,5 +44,17 @@
 			<li><a href="https://www.linkedin.com/in/zhenbang-jiao-01b668bb/">LinkedIn</a></li>
 			</ul>
 		</footer>
+        
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 	</body>
 </html>
